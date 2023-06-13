@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+    <style>
+        #input1{
+            margin-bottom: 12px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script language="Javascript" type="text/Javascript">
+
+        // document.getElementByID("heading").ondbclick=function(){fun()};
+
+        // window.onload=function(){
+        //     document.getElementById("bg").style.color="blue";
+        //     document.getElementById("bg").style.font-size="50px";
+        // }
+
+        function fun(){
+            document.getElementById("heading").innerHTML="Welcome to the Javascript";
+        }
+
+        function clickevent()
+        {
+            document.write("This is a Javascript");
+        }
+
+        function mouseoverEvent() {
+            document.getElementById("mouseover").style.background="green";
+        }
+
+        function mouseoutEvent() {
+            document.getElementById("mouseout").style.background="pink", "size:23px", "margin:12px";
+        }
+        
+        function mousedownEvent() {
+            document.getElementById("mouseout").style.background="pink";
+        }
+
+        function mouseMoveEvent() {
+            document.getElementById("input3").style.background="yellow"
+        }
+
+        function FocusEvent() {
+            document.getElementById("input1").style.background="aqua";
+        }
+
+        function KeyDownEvent()
+        {
+            document.getElementById("input2");
+            alert("Pressed a key");
+        }
+
+        // Async await
+        function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+async function myFunction() {return "Hello";}
+
+myFunction().then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+        
+    </script>
+    
+    <!-- <h1 id="bg" >I am Shubham</h1> -->
+    <h2 id="heading" ondblclick="fun()">Enter Something Here</h2>
+    <input type="text" id="input1" onfocus="FocusEvent()">
+    <br/>
+    <p id="demo"></p>
+    <!-- <input type="text" id="input2" onkeydown="KeyDownEvent()">
+    <br/>
+    <input type="text" id="input3" onmousemove="mouseMoveEvent()">
+    <br/>
+    <form>
+        <input type="button" onclick="clickevent()" value="Submit">
+        <br/>
+        <input type="button" id="mouseover"onmouseover="mouseoverEvent()" value="mouseover">
+        <br/>
+        <input type="button" id="mouseout"onmouseout="mouseoutEvent()" value="mouseout">
+        
+    </form> -->
+
+
+
+</body>
+</html>

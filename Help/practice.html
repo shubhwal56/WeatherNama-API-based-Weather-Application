@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Star Program</title>
+    <style>
+        body{
+            color: red;
+            font-size: 25px;
+
+        }
+        .space{
+            color:grey;
+            opacity: 0.2;
+        }
+        .top-right{
+            color: blue;
+        }
+        .top-left{
+            color: greenyellow;
+        }
+        .bottom-right{
+            color: red;
+        }
+        .bottom-left{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <h4>Star Program</h4>
+    <div id="display"></div>
+    <h2></h2>
+    <div id="display1"></div>
+    <script>
+        var star="";
+
+        for (let i = 4; i >= 1; i--) {
+
+            for (let k = 1; k <= 5-i; k++) {
+                // document.write("&nbsp;&nbsp")
+                star += "<span class='space'>*</span>"
+            }
+            for (let j = 1; j <= i; j++) {
+
+                // document.write("*")
+                star += "<span class='top-left'>*</span>";
+            }
+
+            for (let l = 2; l <= i; l++) {
+
+                // document.write("*")
+                star += "<span class='top-right'>*</span>"
+            }
+            // document.write("<br/>")
+            star += "<br/>";
+        }
+
+        for (let i = 2; i <= 5; i++) {
+
+            for (let k = 1; k <= 5-i; k++) {
+                // document.write("&nbsp;&nbsp")
+                star += "<span class='space'>*</span>"
+            }
+            for (let j = 1; j <= i; j++) {
+
+                // document.write("*")
+                star += "<span class='bottom-left'>*</span>";
+            }
+
+            for (let l = 2; l <= i; l++) {
+
+                // document.write("*")
+                star += "<span class='bottom-right'>*</span>"
+            }
+            // document.write("<br/>")
+            star += "<br/>";
+        }
+
+        document.getElementById("display").innerHTML = star;
+
+        var star1="";
+        for (let i = 5; i >= 1; i--) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*")
+            }
+            
+            for (let k = 1; k <= 5-i; k++) {
+                document.write("<span class='space'>*</span>")
+            }
+            for (let k = 2; k <= 5-i; k++) {
+                document.write("<span class='space'>*</span>")
+            }
+
+            if(i==5){
+                m=i-1;
+            }
+            else{
+                m=i;
+            }
+
+            for (let l = 1; l <= m; l++) {
+                document.write("*")
+            }
+            
+            document.write("<br/>")
+        }
+        for (let i = 2; i <= 5; i++) {
+            for (let j = 1; j <= i; j++) {
+                document.write("*")
+            }
+            
+            for (let k = 1; k <= 5-i; k++) {
+                document.write("<span class='space'>*</span>")
+            }
+            for (let k = 2; k <= 5-i; k++) {
+                document.write("<span class='space'>*</span>")
+            }
+
+            if(i==5){
+                m=i-1;
+            }
+            else{
+                m=i;
+            }
+
+            for (let l = 1; l <= m; l++) {
+                document.write("*")
+            }
+            
+            document.write("<br/>")
+        }
+        document.getElementById("display1").innerHTML = star1;
+        
+    </script>
+</body>
+</html>
